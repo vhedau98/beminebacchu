@@ -3,94 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>For You, Baccha 🤍</title>
+  <title>For You 🤍</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- PAGE 1 -->
-  <section class="page show">
-    <div class="content">
-      <h1>Baccha 🫶</h1>
+  <section class="page active">
+    <div class="card">
       <p>
         I really love you.<br>
         I want you.<br>
         And I want to keep choosing you —
-        not just today, but every day.
+        not just today, but every day, baccha 🫶
       </p>
-      <button onclick="next()">Next</button>
+      <button onclick="nextPage()">Next</button>
     </div>
   </section>
 
   <!-- PAGE 2 -->
   <section class="page">
-    <div class="content">
+    <div class="card">
       <p>
         It’s been <strong>1 year, 8 months+</strong><br>
         zale aaplyala sobat.
       </p>
       <p>
-        So many moments —
-        laughs, fun, energy…
+        So many moments, laughs, fun, energy…
+        and somewhere in between,<br>
+        <strong>tumhi maza comfort banlaat —
+        maza favourite comfort.</strong>
       </p>
-      <p>
-        Ani hya saglya madhe,<br>
-        <strong>tumhi maza comfort<br>
-        ani maza favourite comfort banlaat.</strong>
-      </p>
-      <button onclick="next()">Next</button>
+      <button onclick="nextPage()">Next</button>
     </div>
   </section>
 
   <!-- PAGE 3 -->
   <section class="page">
-    <div class="content">
+    <div class="card">
+      <p>
+        With you, love feels easy.<br>
+        Even the simplest days feel warm,
+        and my heart feels calm knowing it’s you.
+      </p>
+      <p>
+        Somehow, loving you feels easy.
+        In a world that’s always loud and rushing,
+        you feel like home to me.
+      </p>
+      <button onclick="nextPage()">Next</button>
+    </div>
+  </section>
+
+  <!-- PAGE 4 (photos) -->
+  <section class="page">
+    <div class="card">
       <div class="polaroids">
         <div class="polaroid"><img src="img/pic1.jpg"></div>
         <div class="polaroid"><img src="img/pic2.jpg"></div>
         <div class="polaroid"><img src="img/pic3.jpg"></div>
       </div>
       <p>
-        Every memory,<br>
-        every version of us —<br>
-        I carry it with me.
+        Every version of life I imagine —
+        the simple days, the hard ones,
+        the beautiful ones —
+        you’re there.
       </p>
-      <button onclick="next()">Next</button>
-    </div>
-  </section>
-
-  <!-- PAGE 4 -->
-  <section class="page">
-    <div class="content">
-      <p>
-        I loved you in the past.<br>
-        I love you in the present —
-        ata aapan together aahet.
-      </p>
-      <p>
-        And I love you in the future<br>
-        that I imagine with you.
-      </p>
-      <button onclick="next()">Next</button>
+      <button onclick="nextPage()">Next</button>
     </div>
   </section>
 
   <!-- PAGE 5 -->
   <section class="page">
-    <div class="content">
-      <h1>Baccha 🤍</h1>
+    <div class="card">
       <p>
-        I don’t see you as just someone in my life.
+        I loved you in the past.<br>
+        I love you now — ata aapan together aahet.<br>
+        And I already love the future
+        I imagine with you.
       </p>
       <p>
-        I see you as someone I want to stay with,
+        You’re not just someone in my life.
+        You’re the one I want to stay with,
         make memories with,
         and build my life with.
       </p>
-      <h2>Be mine forever.</h2>
-      <p class="sign">— Always yours 🫶</p>
+      <button onclick="nextPage()">Next</button>
     </div>
   </section>
+
+  <!-- PAGE 6 : VALENTINE -->
+  <section class="page">
+    <div class="card">
+      <h1>Be my Valentine? 💖</h1>
+      <div class="yes-buttons">
+        <button onclick="sayYes()">YES 🫶</button>
+        <button onclick="sayYes()">YES 😤💘</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- POPUP -->
+  <div class="popup" id="popup">
+    <div class="popup-card">
+      <h2>letssshfihf 😭💖</h2>
+      <p>ilyyyyyy baccha 🫶</p>
+      <button onclick="closePopup()">🥹🫂</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
