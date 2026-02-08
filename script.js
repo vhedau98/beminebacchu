@@ -1,11 +1,11 @@
-let current = 0;
+let currentPage = 0;
 const pages = document.querySelectorAll(".page");
 
-function next() {
-  pages[current].classList.remove("active");
-  current++;
-  if (current < pages.length) {
-    pages[current].classList.add("active");
+function nextPage() {
+  if (currentPage < pages.length - 1) {
+    pages[currentPage].classList.remove("active");
+    currentPage++;
+    pages[currentPage].classList.add("active");
   }
 }
 
