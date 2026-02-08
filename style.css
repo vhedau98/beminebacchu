@@ -3,16 +3,16 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
+/* 🔥 BACKGROUND IMAGE */
 body {
   margin: 0;
   height: 100vh;
   overflow: hidden;
 
-  /* Romantic gradient background */
-  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  background: url("bg.jpg") center / cover no-repeat fixed;
 }
 
-/* Page system */
+/* Pages */
 .page {
   position: absolute;
   inset: 0;
@@ -20,20 +20,22 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  background: transparent;
 }
 
 .page.active {
   display: flex;
 }
 
-/* Card */
+/* Glass card */
 .card {
-  background: rgba(255,255,255,0.95);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
   padding: 30px;
   border-radius: 24px;
   max-width: 360px;
   text-align: center;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
   animation: fadeUp 0.6s ease;
 }
 
@@ -48,12 +50,12 @@ h1, h2 {
   color: #b11226;
 }
 
-/* Image */
+/* Photos */
 .photo {
   width: 100%;
   border-radius: 18px;
   margin-bottom: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
 /* Buttons */
