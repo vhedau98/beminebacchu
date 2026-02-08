@@ -3,7 +3,6 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* 🔥 iOS-SAFE BACKGROUND */
 body {
   margin: 0;
   height: 100vh;
@@ -11,7 +10,6 @@ body {
   position: relative;
 }
 
-/* background layer */
 body::before {
   content: "";
   position: fixed;
@@ -20,7 +18,6 @@ body::before {
   z-index: -1;
 }
 
-/* Pages */
 .page {
   position: absolute;
   inset: 0;
@@ -32,9 +29,20 @@ body::before {
 
 .page.active {
   display: flex;
+  animation: slideFade 0.7s ease;
 }
 
-/* Glass Card */
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .card {
   background: rgba(255,255,255,0.88);
   backdrop-filter: blur(8px);
@@ -43,21 +51,15 @@ body::before {
   max-width: 360px;
   text-align: center;
   box-shadow: 0 30px 60px rgba(0,0,0,0.35);
-  animation: fadeUp 0.6s ease;
 }
 
-/* Text */
 p {
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: 19px;
+  line-height: 1.7;
   color: #5c0a17;
+  min-height: 140px;
 }
 
-h1, h2 {
-  color: #b11226;
-}
-
-/* Images */
 .photo {
   width: 100%;
   border-radius: 18px;
@@ -65,7 +67,6 @@ h1, h2 {
   box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
-/* Buttons */
 button {
   margin-top: 22px;
   padding: 10px 22px;
@@ -77,45 +78,8 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  background: #e63946;
-}
-
 .yes-buttons {
   display: flex;
   gap: 15px;
   justify-content: center;
-}
-
-/* Popup */
-.popup {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
-
-.popup.show {
-  display: flex;
-}
-
-.popup-card {
-  background: white;
-  padding: 30px;
-  border-radius: 22px;
-  text-align: center;
-}
-
-/* Animation */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
