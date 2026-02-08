@@ -1,7 +1,7 @@
 let current = 0;
 const pages = document.querySelectorAll(".page");
 
-function nextPage() {
+function next() {
   pages[current].classList.remove("active");
   current++;
   if (current < pages.length) {
